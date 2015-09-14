@@ -18,15 +18,16 @@
   <tbody>
     <% @driver_applications.each do |driver_application| %>
       <tr>
-        <td><%= driver_application.user_id %></td>
+      	<% @user = User.find(driver_application.user_id)%>
+      	<% @city = City.find(driver_application.city_id)%>
+        <td><%= @user.full_name %></td>
         <td><%= driver_application.phone %></td>
         <td><%= driver_application.status %></td>
-        <td><%= driver_application.city_id %></td>
-        <td><%= driver_application.created_at %></td>
-        <td><%= driver_application.updated_at %></td>
+        <td><%= @city.name %></td>
+        <td><%= driver_application.created_at.strftime("%m/%d/%Y %I:%M%p") %></td>
+        <td><%= driver_application.updated_at.strftime("%m/%d/%Y %I:%M%p") %></td>
         <td><%= link_to 'Show', driver_application %></td>
         <td><%= link_to 'Edit', edit_driver_application_path(driver_application) %></td>
-        <td><%= link_to 'Destroy', driver_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

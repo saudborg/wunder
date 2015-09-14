@@ -16,11 +16,10 @@
     <% @cities.each do |city| %>
       <tr>
         <td><%= city.name %></td>
-        <td><%= city.created_at %></td>
-        <td><%= city.updated_at %></td>
+        <td><%= city.created_at.strftime("%m/%d/%Y %I:%M%p") %></td>
+        <td><%= city.updated_at.strftime("%m/%d/%Y %I:%M%p") %></td>
         <td><%= link_to 'Show', city %></td>
         <td><%= link_to 'Edit', edit_city_path(city) %></td>
-        <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

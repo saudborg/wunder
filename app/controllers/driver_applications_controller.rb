@@ -25,6 +25,8 @@ class DriverApplicationsController < ApplicationController
   # POST /driver_applications.json
   def create
     @driver_application = DriverApplication.new(driver_application_params)
+    
+    # Always get the current time to save
     @driver_application.created_at = DateTime.current
 
     respond_to do |format|
@@ -41,7 +43,10 @@ class DriverApplicationsController < ApplicationController
   # PATCH/PUT /driver_applications/1
   # PATCH/PUT /driver_applications/1.json
   def update
+    
+    #Always get the current time to update
     @driver_application.updated_at = DateTime.current
+    
     respond_to do |format|
       if @driver_application.update(driver_application_params)
         format.html { redirect_to @driver_application, notice: 'Driver application was successfully updated.' }
@@ -71,6 +76,7 @@ class DriverApplicationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def driver_application_params
+      #The fields created_at and updated_at don't need be validated
       params.require(:driver_application).permit(:user_id, :phone, :status, :city_id)
     end
     

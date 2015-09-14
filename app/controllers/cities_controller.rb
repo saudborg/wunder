@@ -1,6 +1,5 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :edit, :update, :destroy]
-
   # GET /cities
   # GET /cities.json
   def index
@@ -25,6 +24,8 @@ class CitiesController < ApplicationController
   # POST /cities.json
   def create
     @city = City.new(city_params)
+
+    # Always get the current time to save
     @city.created_at = DateTime.current
 
     respond_to do |format|
@@ -41,8 +42,10 @@ class CitiesController < ApplicationController
   # PATCH/PUT /cities/1
   # PATCH/PUT /cities/1.json
   def update
+ 
+    #Always get the current time to update
     @city.updated_at = DateTime.current
-    
+
     respond_to do |format|
       if @city.update(city_params)
         format.html { redirect_to @city, notice: 'City was successfully updated.' }
@@ -65,13 +68,15 @@ class CitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_city
-      @city = City.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def city_params
-      params.require(:city).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_city
+    @city = City.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def city_params
+    #The fields created_at and updated_at don't need be validated
+    params.require(:city).permit(:name)
+  end
 end

@@ -72,6 +72,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
+      #The fields created_at and updated_at don't need be validated
       params.require(:user).permit(:first_name, :last_name, :email)
     end
 end
