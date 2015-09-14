@@ -25,12 +25,13 @@ Things you may want to cover:
 										http://localhost:3000/users
 										http://localhost:3000/driver_applications
 										http://localhost:3000/search
-										
-/cities has a CRUD to City
-/users has a CRUD to User
-/driver_applications has a CRUD to Driver Application
+
+/n										
+/n /cities has a CRUD to City
+/n /users has a CRUD to User
+/n /driver_applications has a CRUD to Driver Application
 	- In this stage, is impossible to select "status"
-/search is a screen where you can search all the applications (is possible to filter) and is possbible to change status in "Change Status" link
+/n /search is a screen where you can search all the applications (is possible to filter) and is possbible to change status in "Change Status" link
 	- You can only change the status in this stage
 
 
