@@ -4,9 +4,9 @@ This application was made for use by Wunder market managers to assess driver app
 
 Is possible to:
 * View a list of driver applications displaying the applicant's name, email address, city and application status
-* Filter a list of driver applications by either `status` or `city` or both<br/>
-	- In this feature, I didn't implement a case that not be passed parameters (city and status). I couldn't understand why the .blank? hadn't worked<br/>
-	- In this screen if you do more than one request, won't work. You need clear the URL. I don't know why the params in URL concat
+* Filter a list of driver applications by either `status` or `city` or both
+	# In this feature, I didn't implement a case that not be passed parameters (city and status). I couldn't understand why the .blank? hadn't worked
+	# In this screen if you do more than one request, won't work. You need clear the URL. I don't know why the params in URL concat
 * Mark a driver application as `accepted` or `rejected`
 
 - For the development I used "rails generate scaffold" command
@@ -21,10 +21,10 @@ Things you may want to cover:
 - Download the code
 - Run rake db:create
 - Run rails server
-- The application will be available in 	http://localhost:3000/cities <br/>
-										http://localhost:3000/users <br/>
-										http://localhost:3000/driver_applications <br/>
-										http://localhost:3000/search <br/>
+- The application will be available in 	# http://localhost:3000/cities <br/>
+										# http://localhost:3000/users <br/>
+										# http://localhost:3000/driver_applications <br/>
+										# http://localhost:3000/search <br/>
 										
 										
 - /cities has a CRUD to City
@@ -32,10 +32,10 @@ Things you may want to cover:
 - /users has a CRUD to User
 
 - /driver_applications has a CRUD to Driver Application<br/>
-	- In this stage, is impossible to select "status"
+	# In this stage, is impossible to select "status"
 	
 - /search is a screen where you can search all the applications (is possible to filter) and is possbible to change status in "Change Status" link <br/>
-	- You can only change the status in this stage
+	# You can only change the status in this stage
 
 
 
