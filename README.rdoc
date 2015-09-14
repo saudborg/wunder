@@ -32,10 +32,10 @@ Things you may want to cover:
 
 - /users has a CRUD to User
 
-- /driver_applications has a CRUD to Driver Application<br/>
+- /driver_applications has a CRUD to Driver Application
 	# In this stage, is impossible to select "status"
 	
-- /search is a screen where you can search all the applications (is possible to filter) and is possbible to change status in "Change Status" link <br/>
+- /search is a screen where you can search all the applications (is possible to filter) and is possbible to change status in "Change Status" link
 	# You can only change the status in this stage
 
 
