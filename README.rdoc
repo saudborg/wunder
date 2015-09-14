@@ -21,20 +21,20 @@ Things you may want to cover:
 - Download the code
 - Run rake db:create
 - Run rails server
-- The application will be available in 	http://localhost:3000/cities
-										http://localhost:3000/users
-										http://localhost:3000/driver_applications
-										http://localhost:3000/search
+- The application will be available in 	* http://localhost:3000/cities
+										* http://localhost:3000/users
+										* http://localhost:3000/driver_applications
+										* http://localhost:3000/search
 										
 										
-/cities has a CRUD to City
+- /cities has a CRUD to City
 
-/users has a CRUD to User
+- /users has a CRUD to User
 
-/driver_applications has a CRUD to Driver Application
+- /driver_applications has a CRUD to Driver Application
 	- In this stage, is impossible to select "status"
 	
-/search is a screen where you can search all the applications (is possible to filter) and is possbible to change status in "Change Status" link
+- /search is a screen where you can search all the applications (is possible to filter) and is possbible to change status in "Change Status" link
 	- You can only change the status in this stage
 
 
