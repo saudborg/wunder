@@ -21,10 +21,11 @@ Things you may want to cover:
 - Download the code
 - Run rake db:create
 - Run rails server
-- The application will be available in 	# http://localhost:3000/cities <br/>
-										# http://localhost:3000/users <br/>
-										# http://localhost:3000/driver_applications <br/>
-										# http://localhost:3000/search <br/>
+- The application will be available in :
+	# http://localhost:3000/cities
+	# http://localhost:3000/users 
+	# http://localhost:3000/driver_applications 
+	# http://localhost:3000/search 
 										
 										
 - /cities has a CRUD to City
