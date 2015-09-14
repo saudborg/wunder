@@ -1,0 +1,32 @@
+<%= form_for(@driver_application) do |f| %>
+  <% if @driver_application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@driver_application.errors.count, "error") %> prohibited this driver_application from being saved:</h2>
+
+      <ul>
+      <% @driver_application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %><br>
+    <%= f.collection_select(:user_id, User.order(:first_name),:id, :full_name, :prompt => true) %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :city_id %><br>
+    <%= f.collection_select(:city_id, City.order(:name),:id, :name, :prompt => true) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

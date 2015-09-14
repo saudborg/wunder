@@ -1,0 +1,45 @@
+<h1>Change status Driver Application</h1>
+<%= form_for(@driver_application) do |f| %>
+<% if @driver_application.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@driver_application.errors.count, "error") %> prohibited this driver_application from being saved:</h2>
+	<ul>
+		<% @driver_application.errors.full_messages.each do |message| %>
+		<li>
+			<%= message %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<p>
+	<strong>User:</strong>
+	<%= User.find(@driver_application.user_id).full_name %>
+</p>
+
+<p>
+	<strong>Phone:</strong>
+	<%= @driver_application.phone %>
+</p>
+
+<p>
+	<strong>City:</strong>
+	<%= @driver_application.city_id %>
+</p>
+
+<div class="field">
+	<%= f.label :status %>
+	<br>
+	<%= f.select(:status, DriverApplication::STATUS_TYPE)%>
+</div>
+
+<div class="field">
+	<%= f.hidden_field :user_id %>
+	<%= f.hidden_field :phone %>
+</div>
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>
+

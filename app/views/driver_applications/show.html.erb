@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @driver_application.user_id %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @driver_application.phone %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @driver_application.status %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @driver_application.city_id %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @driver_application.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @driver_application.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_driver_application_path(@driver_application) %> |
+<%= link_to 'Back', driver_applications_path %>
